@@ -24,7 +24,7 @@ const Login = ({setLog}) => {
 
   function handleSubmit(){
     if(data.email && data.password){
-      axios.post("http://localhost:2345/auth/Login",data).then(({data}) => {
+      axios.post("https://backend1242.herokuapp.com/auth/Login",data).then(({data}) => {
         setState(true);
         setHidden(data)
         localStorage.setItem("app", JSON.stringify(data));

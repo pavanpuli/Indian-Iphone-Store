@@ -25,7 +25,7 @@ const SignUp = () => {
 
   function handleSubmit(){
     if(data.name && data.email && data.password){
-      axios.post("http://localhost:2345/auth/Signup",data).then(() => {
+      axios.post("https://backend1242.herokuapp.com/auth/Signup",data).then(() => {
         navigate("/Login")
       })
     }
