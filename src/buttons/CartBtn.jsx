@@ -2,11 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {useSelector} from "react-redux"
 const CartBtn=()=>{
-     const state = useSelector((state)=>state.addItems)
+     const state = useSelector((store)=>store.item)
+     console.log(state)
     return (
         <div>
-              <Link style={{background:"white",color:"black",height:"50px",width:"80px",fontSize:"25px"}}  to="/cart" className="btn btn-outline-primary ms-2">
-                 <span className="fa fa-shopping-cart me-1.log(state"></span>({state.length})
+              <Link  to="/cart" className="btn btn-outline-primary ms-2">
+                 <span className="fa fa-shopping-cart me-1"></span>Cart : ({state.length})
                 </Link>
         </div>
     )
